@@ -1,6 +1,6 @@
-import React, { createContext, useCallback, useContext, useMemo, useState } from "react";
-import { Box, ThemeProvider } from "@mui/system";
-import { DarkTheme, LightTheme } from "../themes";
+import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import { Box, ThemeProvider } from '@mui/system';
+import { DarkTheme, LightTheme } from '../themes';
 
 interface IThemeContextData {
     themeName: 'Light' | 'Dark';
@@ -12,7 +12,7 @@ const ThemeContext = createContext({} as IThemeContextData);
 
 export const useAppThemeContext = () => {
     return useContext(ThemeContext);
-}
+};
 
 interface IAppThemeProviderProps {
     children: React.ReactNode
@@ -25,12 +25,12 @@ export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children })
     //faz a troca do tema, se fora Light, retorna Dark, se nao for, retorna Light
     const toggleTheme = useCallback(() => {
         setThemeName(oldThemeName => oldThemeName === 'Light' ? 'Dark' : 'Light');
-    },[])
+    },[]);
 
     const theme = useMemo(() => {
         if (themeName === 'Light') return LightTheme;
 
-        return DarkTheme
+        return DarkTheme;
     },[themeName]);
 
     
@@ -42,6 +42,6 @@ export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children })
                 </Box>
             </ThemeProvider>
         </ThemeContext.Provider> 
-    )
-}
+    );
+};
 
