@@ -1,11 +1,11 @@
 import { Avatar, Box, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
-import { useDrawerContext } from '../../contexts';
+import { useAppThemeContext, useDrawerContext } from '../../contexts';
 import logo from '../menu-lateral/Mateus.png';
 
 interface IMenuLateralProps {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 interface IListItemLink {
@@ -45,6 +45,8 @@ export const MenuLateral:React.FC<IMenuLateralProps> = ( {children} ) => {
     const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
     const {isDrawerOpen, toggleDrawerOpen, drawerOptions} = useDrawerContext();
+    const { themeName, toggleTheme } = useAppThemeContext();
+
 
 
 
@@ -76,6 +78,16 @@ export const MenuLateral:React.FC<IMenuLateralProps> = ( {children} ) => {
                                     onClick={smDown ? toggleDrawerOpen : undefined}
                                 />
                             ))}
+                        </List>
+                    </Box>
+                    <Box>
+                        <List component="nav">
+                            <ListItemButton onClick={toggleTheme}>
+                                <ListItemIcon>
+                                    <Icon>{themeName === 'Light' ? 'dark_mode' : 'light_mode'}</Icon>
+                                </ListItemIcon>
+                                <ListItemText primary={themeName === 'Light' ? 'Tema Dark' : 'Tema Ligth'} />
+                            </ListItemButton>
                         </List>
                     </Box>
                     
