@@ -2,8 +2,27 @@
     "pessoas": [
         {
             "id": 1,
-            "name": "Mateus",
-            "lastName": "Leal"
+            "nomeCompleto": "Mateus Leal",
+            "email": "mateus@leal.com",
+            "cidadeId": 1
+        },
+        {
+            "id": 2,
+            "nomeCompleto": "Bruna Leal",
+            "email": "bruna@leal.com",
+            "cidadeId": 3
+        },
+        {
+            "id": 3,
+            "nomeCompleto": "Gustavo Leal",
+            "email": "gustavo@leal.com",
+            "cidadeId": 3
+        },
+        {
+            "id": 4,
+            "nomeCompleto": "Rodrigo Leal",
+            "email": "rodrigo@leal.com",
+            "cidadeId": 3
         }
     ]
 }
