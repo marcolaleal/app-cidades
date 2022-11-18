@@ -22,7 +22,7 @@ export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children })
     const [themeName, setThemeName] = useState<'Light' | 'Dark'>('Light');
     
 
-    //faz a troca do tema, se fora Light, retorna Dark, se nao for, retorna Light
+    //faz a troca do tema, se for Light, retorna Dark, se nao for, retorna Light
     const toggleTheme = useCallback(() => {
         setThemeName(oldThemeName => oldThemeName === 'Light' ? 'Dark' : 'Light');
     },[]);

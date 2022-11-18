@@ -4,7 +4,7 @@ export const Environment = {
     /**
      * Define a quantidade de linhas a ser carregada por padrao nas listagens
      */
-    LIMITE_DE_LINHAS: 10,
+    LIMITE_DE_LINHAS: 5,
 
     /**
      * Texto exibido nas caixas de pesquisa
