@@ -20,15 +20,9 @@
     },
     {
       "id": 4,
-      "nomeCompleto": "Rodrigo Leal",
+      "nomeCompleto": "Rodrigo Faria Leal",
       "email": "rodrigo@leal.com",
       "cidadeId": 3
-    },
-    {
-      "id": 5,
-      "nomeCompleto": "Mateus Leal 02",
-      "email": "mateus@leal.com",
-      "cidadeId": 1
     },
     {
       "id": 6,
@@ -79,22 +73,10 @@
       "cidadeId": 1
     },
     {
-      "id": 14,
-      "nomeCompleto": "Mateus Leal 05",
-      "email": "mateus@leal.com",
-      "cidadeId": 1
-    },
-    {
-      "id": 15,
-      "nomeCompleto": "Mateus Leal 06",
-      "email": "mateus@leal.com",
-      "cidadeId": 1
-    },
-    {
-      "id": 16,
-      "nomeCompleto": "Mateus Leal 07",
-      "email": "mateus@leal.com",
-      "cidadeId": 1
+      "nomeCompleto": "Maria de Fatima Leal",
+      "email": "fafa@gmail.com",
+      "cidadeId": "3",
+      "id": 14
     }
   ]
 }
