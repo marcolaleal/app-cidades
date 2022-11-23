@@ -1,4 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
+
+//aplica as traducoes do Yup (validador de formularios)
+import './shared/forms/traducoesYup';
+
 import { AppRoutes } from './routes';
 import { MenuLateral } from './shared/components';
 import { DrawerProvider } from './shared/contexts';

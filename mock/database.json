@@ -5,30 +5,12 @@
       "nomeCompleto": "Mateus Faria leal",
       "email": "marcolaleal@gmail.com",
       "cidadeId": "1"
-    },
+    }
+  ],
+  "cidades": [
     {
-      "id": 2,
-      "nomeCompleto": "Bruna Guimarães Santos",
-      "email": "bruna@gmail.com",
-      "cidadeId": "2"
-    },
-    {
-      "id": 3,
-      "nomeCompleto": "Gustavo Faria Leal",
-      "email": "gustavo@gmail.com",
-      "cidadeId": 3
-    },
-    {
-      "id": 4,
-      "nomeCompleto": "Rodrigo Faria Leal",
-      "email": "rodrigo@gmail.com",
-      "cidadeId": 3
-    },
-    {
-      "id": 5,
-      "nomeCompleto": "Maria de Fatima Leal",
-      "email": "fatima@gmail.com",
-      "cidadeId": "3"
+      "nome": "Formiga",
+      "id": 1
     }
   ]
 }

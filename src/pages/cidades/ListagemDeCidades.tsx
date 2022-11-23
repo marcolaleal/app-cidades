@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Icon, IconButton, LinearProgress, Pagination, Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow } from '@mui/material';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
-import { IListagemPessoa, PessoaService } from '../../shared/services/api/pessoas/PessoasService';
+import { IListagemCidade, CidadesService } from '../../shared/services/api/cidades/CidadesService';
 import { FerramentasDeListagem } from '../../shared/components';
 import { LayoutBaseDePagina } from '../../shared/layouts';
 import { Environment } from '../../shared/environment';
@@ -10,12 +10,12 @@ import { useDebounce } from '../../shared/hooks';
 
 
 
-export const ListagemDePessoas: React.FC = () => {
+export const ListagemDeCidades: React.FC = () => {
     const [searchParams,setSearchParams] = useSearchParams();
     const { debounce } = useDebounce(700);
     const navigate = useNavigate();
 
-    const [rows, setRows] = useState<IListagemPessoa[]>([]);
+    const [rows, setRows] = useState<IListagemCidade[]>([]);
     const [totalCount, setTotalCount] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -35,7 +35,7 @@ export const ListagemDePessoas: React.FC = () => {
         //a consulta so será feita apos o usuraio ficar um certo tempo sem digitar no campos pesquisar
         //para evitar que a cada letra seja feita uma nova consulta
         debounce(() => {
-            PessoaService.getAll(pagina, busca)
+            CidadesService.getAll(pagina, busca)
                 .then((result) => {
                     // faz o set do isLoad como false no fim da consulta, mesmo sem saber se a consulta retorna erro ou os dados
                     setIsLoading(false);
@@ -53,7 +53,7 @@ export const ListagemDePessoas: React.FC = () => {
 
     const handleDelete =(id: number) => {
         if (confirm('Tem certeza que deseja excluir esse item?')) {
-            PessoaService.deleteById(id)
+            CidadesService.deleteById(id)
                 .then(result => {
                     if (result instanceof Error) {
                         alert(result.message);
@@ -72,14 +72,14 @@ export const ListagemDePessoas: React.FC = () => {
 
     return(
         <LayoutBaseDePagina
-            titulo='Listagem de Pessoas'
+            titulo='Listagem de Cidades'
             barraDeFerramentas={
                 <FerramentasDeListagem
                     mostrarBotaoNovo
                     mostrarInputBusca
                     textoBotaoNovo='Nova'
                     textoDaBusca={busca}
-                    aoClicarEmNovo={() => navigate('/pessoas/detalhe/nova')}
+                    aoClicarEmNovo={() => navigate('/cidades/detalhe/nova')}
                     aoMudarTextoDeBusca={texto => setSearchParams({ busca: texto, pagina: '1' },{replace: true})}
                 />
 
@@ -90,9 +90,8 @@ export const ListagemDePessoas: React.FC = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell width={110}>Ações</TableCell>
-                            <TableCell>Nome completo</TableCell>
-                            <TableCell>Email</TableCell>
+                            <TableCell width={100}>Ações</TableCell>
+                            <TableCell>Nome</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -103,12 +102,11 @@ export const ListagemDePessoas: React.FC = () => {
                                     <IconButton size='small' onClick={() => handleDelete(row.id)}>
                                         <Icon>delete</Icon>
                                     </IconButton>
-                                    <IconButton size='small' onClick={() => navigate(`/pessoas/detalhe/${row.id}`)} >
+                                    <IconButton size='small' onClick={() => navigate(`/cidades/detalhe/${row.id}`)} >
                                         <Icon>edit</Icon>
                                     </IconButton>
                                 </TableCell>
-                                <TableCell>{row.nomeCompleto}</TableCell>
-                                <TableCell>{row.email}</TableCell>
+                                <TableCell>{row.nome}</TableCell>
                             </TableRow>
                         ))}
 
