@@ -47,8 +47,6 @@ export const ListagemDePessoas: React.FC = () => {
                     }
                 });
         });
-
-
     }, [busca, pagina]);
 
     const handleDelete =(id: number) => {

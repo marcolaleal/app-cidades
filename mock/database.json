@@ -4,13 +4,57 @@
       "id": 1,
       "nomeCompleto": "Mateus Faria leal",
       "email": "marcolaleal@gmail.com",
-      "cidadeId": "1"
+      "cidadeId": 1
+    },
+    {
+      "id": 2,
+      "nomeCompleto": "Gustavo Faria leal",
+      "email": "gustavo@gmail.com",
+      "cidadeId": 1
+    },
+    {
+      "id": 3,
+      "nomeCompleto": "Rodrigo Faria leal",
+      "email": "marcolaleal@gmail.com",
+      "cidadeId": 1
+    },
+    {
+      "id": 4,
+      "nomeCompleto": "Bruna leal",
+      "email": "bruna@gmail.com",
+      "cidadeId": 3
+    },
+    {
+      "id": 6,
+      "nomeCompleto": "Lais Ribeiro Leal",
+      "email": "lais@gmail.com",
+      "cidadeId": 1
     }
   ],
   "cidades": [
     {
       "nome": "Formiga",
       "id": 1
+    },
+    {
+      "nome": "Arcos",
+      "id": 2
+    },
+    {
+      "nome": "Corrego Fundo",
+      "id": 3
+    },
+    {
+      "nome": "Pains",
+      "id": 4
+    },
+    {
+      "nome": "Lagoa da Prata",
+      "id": 5
+    },
+    {
+      "nome": "Divinopolis",
+      "id": 6
     }
   ]
 }
