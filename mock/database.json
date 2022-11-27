@@ -49,12 +49,20 @@
       "id": 4
     },
     {
-      "nome": "Lagoa da Prata",
-      "id": 5
-    },
-    {
       "nome": "Divinopolis",
       "id": 6
+    },
+    {
+      "nome": "Gonçalves",
+      "id": 7
+    },
+    {
+      "nome": "Piumhi",
+      "id": 8
+    },
+    {
+      "nome": "Candeias",
+      "id": 9
     }
   ]
 }
